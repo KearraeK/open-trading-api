@@ -164,4 +164,4 @@ cython_debug/
 
 *.lock
 
-*_logs/
+*_logs/frontend/node_modules/
