@@ -8,6 +8,7 @@ const DEFAULTS = {
   no_vix: false,
   no_fear_greed: false,
   step: 5,
+  demo: true,
 }
 
 const QUICK_TICKERS = ['SPY', 'QQQ', 'IWM', 'AAPL', 'TSLA', 'NVDA']
@@ -107,6 +108,14 @@ export default function AnalyzerForm({ onAnalyze, loading }) {
               className="rounded"
             />
             공포탐욕 제외
+          </label>
+          <label className="flex items-center gap-2 text-xs cursor-pointer">
+            <input
+              type="checkbox" checked={p.demo}
+              onChange={(e) => set('demo', e.target.checked)}
+              className="rounded accent-amber-500"
+            />
+            <span className="text-amber-600 font-semibold">데모 모드</span>
           </label>
         </div>
       </div>
